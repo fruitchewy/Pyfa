@@ -46,8 +46,8 @@ for root, folders, files in chain.from_iterable(os.walk(path) for path in paths)
           import_these.append(mod_name)
 
 
-a = Analysis([r'/Users/tadeasfort/Downloads/pyfa/pyfa.py'],
-           pathex=['/Users/tadeasfort/.pyenv/versions/anaconda3-2023.07-2/envs/pyfa-ocnda-env/bin'],
+a = Analysis([r'/Users/akauble/pyfa2/Pyfa/pyfa.py'],
+           pathex=['/opt/homebrew/anaconda3/envs/pyfa-conda-env/bin'],
            binaries=[],
            datas=added_files,
            hiddenimports=import_these,

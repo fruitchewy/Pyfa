@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Activate your conda environment
-source activate /Users/tadeasfort/.pyenv/versions/anaconda3-2023.07-2/envs/pyfa
+source activate /opt/homebrew/anaconda3/envs/pyfa-conda-env
 
 # Check if PYFA_VERSION is set
 if [ -z "$PYFA_VERSION" ]; then

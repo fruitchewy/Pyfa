@@ -1,6 +1,6 @@
 # @format
 
-name: pyfa
+name: pyfa-conda-env
 channels:
   - conda-forge
 dependencies:
@@ -97,4 +97,4 @@ dependencies:
   - yaml=0.2.5=h3422bc3_2
   - zlib=1.2.13=h53f4e23_5
   - zstd=1.5.5=h4f39d0f_0
-prefix: /Users/tadeasfort/.pyenv/versions/anaconda3-2023.07-2/envs/pyfa
+  - pyinstaller=6.1
