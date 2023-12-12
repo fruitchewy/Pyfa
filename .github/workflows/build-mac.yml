@@ -31,6 +31,7 @@ jobs:
         python3 scripts/compile_lang.py
         python3 scripts/dump_crowdin_progress.py
     - name: Build application
+      run: |
         python3 db_update.py
         export PYFA_VERSION="$(python3 scripts/dump_version.py)"
         bash scripts/osx-package.sh
