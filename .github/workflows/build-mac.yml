@@ -23,7 +23,7 @@ jobs:
         python-version: "3.11"
     - name: Environment setup
       run: |
-        bash scripts/osx-setup.sh -a aarch64
+        bash scripts/osx-setup.sh -a arm64
     - name: Generate localization
       run: |
         bash scripts/osx-translations.sh
