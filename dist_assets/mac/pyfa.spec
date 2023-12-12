@@ -8,7 +8,7 @@ import requests.certs
 label = os.getenv('PYFA_VERSION', 'version')
 
 with open('.version', 'w+') as f:
-    f.write(label.decode())
+    f.write(label)
 
 block_cipher = None
 
