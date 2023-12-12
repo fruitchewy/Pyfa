@@ -23,7 +23,7 @@ jobs:
         python-version: "3.11"
     - name: Environment setup
       run: |
-        bash scripts/osx-setup.sh        
+        bash scripts/osx-setup.sh -a aarch64
     - name: Generate localization
       run: |
         bash scripts/osx-translations.sh
@@ -33,7 +33,8 @@ jobs:
       run: |
         python3 db_update.py
         export PYFA_VERSION="$(python3 scripts/dump_version.py)"
-        bash scripts/osx-package.sh
+        brew install git
+        bash scripts/osx-package.sh -a arm64
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
