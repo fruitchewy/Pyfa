@@ -12,6 +12,6 @@ python3 --version
 echo "Upgrading pip..."
 python3 -m pip install --upgrade pip
 echo "Installing app requirements..."
-python3 -m pip install --platform=$arch -r requirements.txt 
+python3 -m pip install --platform=$arch --only-binary=:all: -r requirements.txt 
 echo "Installing packaging tools..."
-python3 -m pip install --platform=$arch PyInstaller==6.2.0 
+python3 -m pip install --platform=$arch --only-binary=:all: PyInstaller==6.2.0 
