@@ -23,7 +23,6 @@ jobs:
         python-version: "3.11"
     - name: Environment setup
       run: |
-        source ~/venv3.11/bin/activate
         bash scripts/osx-setup.sh        
     - name: Generate localization
       run: |
