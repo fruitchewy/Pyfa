@@ -12,7 +12,7 @@ class AutoListCtrl(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin, listmix.ListRowH
         listmix.ListRowHighlighter.__init__(self)
         if wx.SystemSettings.GetAppearance().IsDark():
             listcol = wx.SystemSettings.GetColour(wx.SYS_COLOUR_LISTBOX)
-            highlight = listcol.ChangeLightness(120)
+            highlight = listcol.ChangeLightness(110)
             listmix.ListRowHighlighter.SetHighlightColor(self, highlight)
 
 class AutoListCtrlNoHighlight(wx.ListCtrl, listmix.ListCtrlAutoWidthMixin, listmix.ListRowHighlighter):
