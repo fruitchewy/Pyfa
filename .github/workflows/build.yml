@@ -33,7 +33,7 @@ jobs:
         python3 db_update.py
         bash scripts/osx-package.sh
       env:
-        PYFA_VERSION=${{ env.GITHUB_REF_NAME }}
+        PYFA_VERSION: ${{ env.GITHUB_REF_NAME }}
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
