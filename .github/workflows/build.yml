@@ -44,6 +44,7 @@ jobs:
       with:
         name: pyfa-mac-x64
         path: dist/*.zip
+
     - name: Create release
       uses: ncipollo/release-action@v1
       if: github.ref == 'refs/heads/master'
@@ -51,6 +52,4 @@ jobs:
         tag: ${{ steps.version.outputs['version'] }}
         commit: ${{ env.GITHUB_REF_NAME }}
         artifacts: "dist/*.zip"
-        artifactErrorsFailBuild: true
-
-        
+        artifactErrorsFailBuild: true       
