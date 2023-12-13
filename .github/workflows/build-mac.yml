@@ -34,6 +34,6 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: dist-app
+        name: pyfa-mac-x64
         path: dist/*.zip
         
