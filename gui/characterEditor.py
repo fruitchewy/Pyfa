@@ -371,7 +371,7 @@ class SkillTreeView(wx.Panel):
         bSizerButtons.AddStretchSpacer()
 
         importExport = ((_t("Import skills from clipboard"), wx.ART_FILE_OPEN, "import"),
-                        (_t("Export skills from clipboard"), wx.ART_FILE_SAVE_AS, "export"))
+                        (_t("Export skills to clipboard"), wx.ART_FILE_SAVE_AS, "export"))
 
         for tooltip, art, attr in importExport:
             bitmap = wx.ArtProvider.GetBitmap(art, wx.ART_BUTTON)
@@ -446,6 +446,7 @@ class SkillTreeView(wx.Panel):
 
         text = fromClipboard().strip()
         if text:
+            sCharacter = Character.getInstance()
             char = self.charEditor.entityEditor.getActiveEntity()
             try:
                 lines = text.splitlines()
@@ -455,7 +456,7 @@ class SkillTreeView(wx.Panel):
                     skill, level = s.rsplit(None, 1)[0], arabicOrRomanToInt(s.rsplit(None, 1)[1])
                     skill = char.getSkill(skill)
                     if skill:
-                        skill.setLevel(level, ignoreRestrict=True)
+                        sCharacter.changeLevel(char.ID, skill.item.ID, level)
 
             except (KeyboardInterrupt, SystemExit):
                 raise
